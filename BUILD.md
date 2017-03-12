@@ -1,5 +1,8 @@
 ## Build
 
+// TODO
+- why build?
+
 Today, many "frontend technologies" use Node.js as build environment.
 
 ### why build?

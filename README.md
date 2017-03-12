@@ -1,9 +1,8 @@
 # U+ `javascript`
 
-> This document is still a stub, please contribute!
+> This document is a work in progress, please contribute!
 
 This document contains best practices to follow when developing javascript applications at UT. 
-
 
 If some project has javascript code, 
 it's a javascript application and this guide applies.
@@ -34,7 +33,8 @@ it's a javascript application and this guide applies.
             - css configuration
             - fonts configuration
 
-- [ECMAScript](ECMAScript)
+- ECMAScript
+    - // TODO links to specs
 
 - [Application architecture](ARCHITECTURE.md)
     - application state

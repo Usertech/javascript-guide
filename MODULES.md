@@ -1,5 +1,10 @@
 ## Modules
 
+// TODO
+- Why modules?
+- Module formats
+- Why CommonJS?
+
 ### CommonJS
 
 javascript [module system]() was at first implemented in Node.js 
