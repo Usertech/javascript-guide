@@ -15,10 +15,6 @@ Because browsers don't support [module system]() natively, module bundlers such 
 - Why modules? 
 - https://nodejs.org/api/modules.html
 
-### 
-
-
-
 ### `package.json`
 
 This file identifies javascript module. 

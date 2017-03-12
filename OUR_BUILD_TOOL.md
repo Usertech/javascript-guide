@@ -1,8 +1,8 @@
 ## `re-app-builder`
 
+Our standard build tool.
 
-
-### Example build of arbitrary js project with `re-app-builder`<a id="build-example"></a>
+### Example build of arbitrary js project
 
 Use `re-app-builder`. This way you can *easily* start a javascript project from scratch!
 Ideal for both quick hacking and production apps.

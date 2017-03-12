@@ -12,19 +12,27 @@ it's a javascript application and this guide applies.
 ## TOC
 
 - [Modules](MODULES.md)
-    - `npm`/`yarn`
+    - CommonJS
+    - `package.json`
+    - `npm`
+        - Package scripts
+    - `yarn`
+    - `node_modules`
+    - Module resolving
         
 - [Build](BUILD.md)
     - why build?
     - javascript versions
-    - build tools
-        - `npm run <script>`
-        - `webpack` + `babel`
-        - `re-app-builder`
+    - [`re-app-builder`](OUR_BUILD_TOOL.md)
+        - Example build of arbitrary js project
+        - Underlying build tools
+            - `npm run <script>`
+            - `webpack` + `babel`
+        - Configuration
+            - config file
             - js configuration
             - css configuration
             - fonts configuration
-    - [`re-app-builder`](OUR_BUILD_TOOL.md)
 
 - [ECMAScript](ECMAScript)
 
