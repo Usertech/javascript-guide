@@ -2,26 +2,37 @@
 
 > This document is a work in progress, please contribute!
 
-This document contains best practices to follow when developing javascript applications at UT. 
+This document contains best practices to follow when developing javascript applications at UT.
+If something 
 
-If some project has javascript code, 
-it's a javascript application and this guide applies.
+*If some project has javascript code, 
+it's a javascript application and this guide applies.*
 
+There are four main parts in this doc which tries to cover topics 
+needed for successful js development.
+- Syntax - evolution of javascript standards
+- Ecosystem - what are modules in javascript and why they exist, what tools does js ecosystem use?
+- Build - how to produce browser javascript from modularized project
+- Architecture - architectural recommendations
 
 ## TOC
 
-- [Modules](MODULES.md)
-    - CommonJS
+- Syntax
+    - // TODO links to specs
+
+- [Ecosystem](ECOSYSTEM.md)
+    - Modules
     - `package.json`
     - `npm`
         - Package scripts
     - `yarn`
     - `node_modules`
     - Module resolving
-        
+
 - [Build](BUILD.md)
     - why build?
     - javascript versions
+    - linting
     - [`re-app-builder`](OUR_BUILD_TOOL.md)
         - Example build of arbitrary js project
         - Underlying build tools
@@ -33,16 +44,17 @@ it's a javascript application and this guide applies.
             - css configuration
             - fonts configuration
 
-- ECMAScript
-    - // TODO links to specs
-
 - [Application architecture](ARCHITECTURE.md)
+    - project structure
     - application state
         - `redux`
     - application ui
         - `react`
+            - stateless (dumb) components
+            - stateful (smart) components a.k.a. containers
+            - `recompose`
+            - "pulling" data from app state, `react-redux`
+            - routing, `react-router`
     - side effects
         - `redux-saga`
-    
-
-
+    - `client-core`

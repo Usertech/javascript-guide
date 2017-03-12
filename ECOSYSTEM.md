@@ -1,4 +1,4 @@
-## Modules
+## Ecosystem
 
 // TODO
 - Why modules?
