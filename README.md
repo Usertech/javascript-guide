@@ -24,7 +24,7 @@ it's a javascript application and this guide applies.
             - js configuration
             - css configuration
             - fonts configuration
-    - example build of arbitrary js app
+    - [`re-app-builder`](OUR_BUILD_TOOL.md)
 
 - [ECMAScript](ECMAScript)
 
