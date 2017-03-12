@@ -26,6 +26,8 @@ it's a javascript application and this guide applies.
             - fonts configuration
     - example build of arbitrary js app
 
+- [ECMAScript](ECMAScript)
+
 - [Application architecture](ARCHITECTURE.md)
     - application state
         - `redux`
