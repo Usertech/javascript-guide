@@ -38,31 +38,31 @@ node package manager - the original package manager
 
 #### Package scripts
 
-        $ # will execute command specified in `package.json` under `scripts.<script>` key
-        $ npm run <script>
+    $ # will execute command specified in `package.json` under `scripts.<script>` key
+    $ npm run <script>
 
-        $ # will execute command specified in `package.json` under `scripts.start` key
-        $ npm run
+    $ # will execute command specified in `package.json` under `scripts.start` key
+    $ npm run
 
-        $ # will execute command specified in `package.json` under `scripts.test` key
-        $ npm test
-        
-        ...
+    $ # will execute command specified in `package.json` under `scripts.test` key
+    $ npm test
+    
+    ...
 
 Example
 
-        // package.json
-        {
-            ... snip ...
-            "scripts": {
-                "say-hi": "echo HI!"
-            }
-            ... snip ...
+    // package.json
+    {
+        ... snip ...
+        "scripts": {
+            "say-hi": "echo HI!"
         }
+        ... snip ...
+    }
 
 
-        $ npm run say-hi
-        $ HI!
+    $ npm run say-hi
+    $ HI!
 
 
 
@@ -76,18 +76,18 @@ Latest package manager for Node.js
 
 [https://yarnpkg.com/en/docs/install]()
 
-        $ # installs `jquery`, saves dependency into package.json
-        $ yarn add jquery 
-        
-        $ # installs `eslint`, saves dependency into package.json devDapendencies
-        $ yarn add --dev eslint
-        
-        $ # ensures all deps are installed according to `yarn.lock`
-        $ yarn install --pure-lockfile
-        
-        $ # ensures all deps are installed according to `package.json` and 
-        $ # `yarn.lock` is regenerated
-        $ yarn install
+    $ # installs `jquery`, saves dependency into package.json
+    $ yarn add jquery 
+    
+    $ # installs `eslint`, saves dependency into package.json devDapendencies
+    $ yarn add --dev eslint
+    
+    $ # ensures all deps are installed according to `yarn.lock`
+    $ yarn install --pure-lockfile
+    
+    $ # ensures all deps are installed according to `package.json` and 
+    $ # `yarn.lock` is regenerated
+    $ yarn install
 
 [https://yarnpkg.com/]()
 
