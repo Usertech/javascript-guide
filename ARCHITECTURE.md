@@ -2,29 +2,43 @@
 
 So far, here are links to mandatory reading. 
 
-### application state
+### Application state
 // TODO
 - what is "application state"
 - why should we care
 
 #### `redux`
-[http://redux.js.org/]()
+[http://redux.js.org/](http://redux.js.org/)
 
 
-### application ui
+### Application ui
 // TODO
 - why react?
 
 #### `react`
-[https://facebook.github.io/react/]()
+[https://facebook.github.io/react/](https://facebook.github.io/react/)
+
+#### `recompose`
+
+[https://github.com/acdlite/recompose](https://github.com/acdlite/recompose)
+
+#### `redux-form`
+
+[http://redux-form.com/6.5.0/](http://redux-form.com/6.5.0/)
 
 
-### side effects
+### Side effects
 // TODO
 - what is side effect?
 - why should we care
 
 #### `redux-saga`
-[https://redux-saga.github.io/redux-saga/]()
+[https://redux-saga.github.io/redux-saga/](https://redux-saga.github.io/redux-saga/)
 
 [Home](README.md)
+
+### REST api documentation
+
+#### swagger spec
+
+[http://swagger.io/specification/](http://swagger.io/specification/)
