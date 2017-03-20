@@ -18,6 +18,10 @@ So far, here are links to mandatory reading.
 #### `react`
 [https://facebook.github.io/react/](https://facebook.github.io/react/)
 
+##### Performance
+
+[https://medium.com/@esamatti/react-js-pure-render-performance-anti-pattern-fb88c101332f](https://medium.com/@esamatti/react-js-pure-render-performance-anti-pattern-fb88c101332f)
+
 #### `recompose`
 
 [https://github.com/acdlite/recompose](https://github.com/acdlite/recompose)
