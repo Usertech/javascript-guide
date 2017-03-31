@@ -29,20 +29,12 @@ needed for successful js development.
     - `node_modules`
     - Module resolving
 
-- [Build](BUILD.md)
+- [Project structure and build](PROJECT.md)
+    - generic frontend project structure
     - why build?
-    - javascript versions
+        - javascript versions
+    - building
     - linting
-    - [`re-app-builder`](OUR_BUILD_TOOL.md)
-        - Example build of arbitrary js project
-        - Underlying build tools
-            - `npm run <script>`
-            - `webpack` + `babel`
-        - Configuration
-            - config file
-            - js configuration
-            - css configuration
-            - fonts configuration
 
 - [Application architecture](ARCHITECTURE.md)
     - project structure
