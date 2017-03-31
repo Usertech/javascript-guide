@@ -24,6 +24,7 @@
 
 ### Bulding project for browser
 
-Use [re-app-builder](https://github.com/stackscz/re-app-builder)
+Use [re-app-builder](https://github.com/stackscz/re-app-builder).
+Refer to [example-project](https://github.com/stackscz/re-app-builder/tree/1.0.0-dev/example-project) for more information.
 
 [Home](README.md)
