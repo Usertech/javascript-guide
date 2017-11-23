@@ -27,7 +27,7 @@ const renderTaskList = (props) => {
 		))
 	));
 	return (
-		<ul>
+		<ul className="task-list">
 			{tasks}
 		</ul>
 	);

@@ -37,9 +37,9 @@ const withFormAddTask = compose(
 );
 
 const renderFormAddTask = ({ handleSubmit, handleFormAddTask }) => (
-	<form onSubmit={handleSubmit(handleFormAddTask)}>
+	<form onSubmit={handleSubmit(handleFormAddTask)} className="form-add-task">
 		<Field component={InputTextField} type="text" name="title" />
-		<button type="submit">Add new</button>
+		<button type="submit" className="button"><span className="fa fa-plus-circle" /> Add new</button>
 	</form>
 );
 

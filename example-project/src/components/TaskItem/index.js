@@ -22,21 +22,25 @@ const withTaskItem = compose(
 );
 
 const renderTaskItem = ({ id, title, completed, editing, handleComplete, handleDelete, handleEdit }) => (
-	<div>
-		<input type="checkbox" checked={completed} onChange={handleComplete} />
-		{completed ? (
-			<strike>{title}</strike>
-		) : (
-			editing ? (
-				<FormEditTask initialValues={{ title }} id={id} />
+	<div className="task-item">
+		<label className="checkbox"><input type="checkbox" checked={completed} onChange={handleComplete} /><span><span className="fa fa-check" /></span></label>
+		<div className="task-item__title">
+			{completed ? (
+				<strike>{title}</strike>
 			) : (
-				<span>{title}</span>
-			)
-		)}
-		{!completed && !editing && (
-			<button onClick={handleEdit}>Edit</button>
-		)}
-		<button onClick={handleDelete}>Delete</button>
+				editing ? (
+					<FormEditTask initialValues={{ title }} id={id} />
+				) : (
+					<span>{title}</span>
+				)
+			)}
+		</div>
+		<div className="task-item__actions">
+			{!completed && !editing && (
+				<button onClick={handleEdit} className="button-action button-action--edit"><span className="fa fa-edit" /></button>
+			)}
+			<button onClick={handleDelete} className="button-action button-action--delete"><span className="fa fa-trash" /></button>
+		</div>
 	</div>
 );
 

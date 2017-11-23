@@ -3,6 +3,7 @@ import { compose, lifecycle } from 'recompose';
 import { connect } from 'react-redux';
 import TaskList from '../../components/TaskList';
 import FormAddTask from '../../forms/FormAddTask';
+import Layout from '../../components/Layout';
 
 const withHomepageScreen = compose(
 	connect(),
@@ -14,9 +15,7 @@ const withHomepageScreen = compose(
 );
 
 const renderHomepageScreen = () => (
-	<div>
-
-		<h1>To-do list</h1>
+	<Layout>
 
 		<h2>Tasks</h2>
 
@@ -30,7 +29,7 @@ const renderHomepageScreen = () => (
 
 		<TaskList type="completed" />
 
-	</div>
+	</Layout>
 );
 
 export default withHomepageScreen(renderHomepageScreen);

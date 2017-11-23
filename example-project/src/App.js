@@ -10,7 +10,7 @@ import { createRoutingModule } from 'client-core/lib/modules/routing';
 import tasksModule from 'modules/tasks';
 
 // Styles
-// import 'styles/index.sass';
+import './styles/index.sass';
 
 import Router from 'client-core/lib/modules/routing/components/Router';
 import routes from './routes';

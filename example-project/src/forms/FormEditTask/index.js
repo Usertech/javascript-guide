@@ -38,9 +38,9 @@ const withFormEditTask = compose(
 );
 
 const renderFormEditTask = ({ handleSubmit, handleFormEditTask }) => (
-	<form onSubmit={handleSubmit(handleFormEditTask)}>
+	<form onSubmit={handleSubmit(handleFormEditTask)} className="form-edit-task">
 		<Field component={InputTextField} type="text" name="title" />
-		<button type="submit">Submit</button>
+		<button type="submit" className="button">Submit</button>
 	</form>
 );
 

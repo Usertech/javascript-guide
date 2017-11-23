@@ -1,43 +1,44 @@
 {
-  "name": "example-project",
-  "version": "1.0.0",
-  "repository": "https://github.com/usertech/javascript-guide",
-  "author": "Usertech",
-  "license": "MIT",
-  "scripts": {
-    "ab": "node ./node_modules/re-app-builder",
-    "clean": "rm -rf ./public && rm -rf ./manifest",
-    "dev": "yarn run clean && export $(cat .env.devserver | xargs) && NODE_ENV=development yarn run ab dev",
-    "build:dev": "yarn run clean && NODE_ENV=development yarn run ab build",
-    "build": "yarn run clean && yarn run ab build",
-    "lint": "eslint ./src",
-    "prepush": "yarn run lint"
-  },
-  "devDependencies": {
-    "add-asset-html-webpack-plugin": "^2.1.2",
-    "babel-plugin-module-resolver": "^3.0.0",
-	"eslint": "^3.18.0",
-    "eslint-config-stacks": "^0.0.7",
-    "eslint-import-resolver-babel-module": "^3.0.0",
-    "eslint-plugin-import": "^2.2.0",
-    "html-webpack-include-assets-plugin": "^1.0.2",
-    "re-app-builder": "https://github.com/stackscz/re-app-builder#4f8b9c1423b96154844528681c20fe3ee579741d"
-  },
-  "dependencies": {
-	"axios": "^0.16.2",
-    "client-core": "https://github.com/stackscz/client-core.git#59f3eb07d7acd77661d9173e86fef9437f2bd260",
-	"history": "^4.6.1",
-	"lodash": "^4.17.4",
-    "react": "^16.1.1",
-    "react-dom": "^16.1.1",
-	"react-redux": "^5.0.6",
-    "react-router": "^4.0.0",
-    "react-router-dom": "^4.2.2",
-    "react-router-redux": "next",
-	"recompose": "0.23.5",
-	"redux": "^3.7.2",
-    "redux-form": "^7.1.1",
-    "redux-saga": "^0.15.3",
-	"seamless-immutable": "^7.1.2"
-  }
+   "name": "example-project",
+   "version": "1.0.0",
+   "repository": "https://github.com/usertech/javascript-guide",
+   "author": "Usertech",
+   "license": "MIT",
+   "scripts": {
+      "ab": "node ./node_modules/re-app-builder",
+      "clean": "rm -rf ./public && rm -rf ./manifest",
+      "dev": "yarn run clean && export $(cat .env.devserver | xargs) && NODE_ENV=development yarn run ab dev",
+      "build:dev": "yarn run clean && NODE_ENV=development yarn run ab build",
+      "build": "yarn run clean && yarn run ab build",
+      "lint": "eslint ./src",
+      "prepush": "yarn run lint"
+   },
+   "devDependencies": {
+      "add-asset-html-webpack-plugin": "^2.1.2",
+      "babel-plugin-module-resolver": "^3.0.0",
+      "eslint": "^3.18.0",
+      "eslint-config-stacks": "^0.0.7",
+      "eslint-import-resolver-babel-module": "^3.0.0",
+      "eslint-plugin-import": "^2.2.0",
+      "html-webpack-include-assets-plugin": "^1.0.2",
+      "re-app-builder": "https://github.com/stackscz/re-app-builder#4f8b9c1423b96154844528681c20fe3ee579741d"
+   },
+   "dependencies": {
+      "axios": "^0.16.2",
+      "client-core": "https://github.com/stackscz/client-core.git#59f3eb07d7acd77661d9173e86fef9437f2bd260",
+      "font-awesome": "^4.7.0",
+      "history": "^4.6.1",
+      "lodash": "^4.17.4",
+      "react": "^16.1.1",
+      "react-dom": "^16.1.1",
+      "react-redux": "^5.0.6",
+      "react-router": "^4.0.0",
+      "react-router-dom": "^4.2.2",
+      "react-router-redux": "next",
+      "recompose": "0.23.5",
+      "redux": "^3.7.2",
+      "redux-form": "^7.1.1",
+      "redux-saga": "^0.15.3",
+      "seamless-immutable": "^7.1.2"
+   }
 }
