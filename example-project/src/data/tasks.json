@@ -1,0 +1,32 @@
+[
+	{
+		"id": "1",
+		"title": "Create simple devstack",
+		"completed": true,
+		"date_added": "2017-11-23T09:08:41.135Z"
+	},
+	{
+		"id": "2",
+		"title": "Write necessary react components",
+		"completed": true,
+		"date_added": "2017-11-23T09:08:49.613Z"
+	},
+	{
+		"id": "3",
+		"title": "Make an example project",
+		"completed": false,
+		"date_added": "2017-11-23T09:08:57.246Z"
+	},
+	{
+		"id": "4",
+		"title": "Send pull request",
+		"completed": false,
+		"date_added": "2017-11-23T09:09:09.805Z"
+	},
+	{
+		"id": "5",
+		"title": "Let coworkes know about it",
+		"completed": false,
+		"date_added": "2017-11-23T09:09:16.164Z"
+	}
+]
