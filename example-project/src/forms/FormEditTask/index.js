@@ -1,13 +1,14 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { compose, withHandlers } from 'recompose';
 import { Field } from 'redux-form';
-import { connect } from 'react-redux';
-import { graphql } from 'react-apollo';
-import withForm from 'client-core/lib/modules/forms/decorators/withForm';
-import InputTextField from '../../form-fields/InputTextField';
 
+import { graphql } from 'react-apollo';
 import allTasksQuery from '../../components/TaskList/query';
 import EDIT_TASK_MUTATION from './mutation';
+
+import InputTextField from '../../form-fields/InputTextField';
+import withForm from 'client-core/lib/modules/forms/decorators/withForm';
 
 const withFormEditTask = compose(
 	connect(),

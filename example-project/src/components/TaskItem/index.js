@@ -1,11 +1,12 @@
 import React from 'react';
-import { compose, withState, withHandlers } from 'recompose';
 import { connect } from 'react-redux';
-import { graphql } from 'react-apollo';
+import { compose, withHandlers } from 'recompose';
 
-import FormEditTask from '../../forms/FormEditTask';
+import { graphql } from 'react-apollo';
 import { CHANGE_STATE_OF_TASK, DELETE_TASK } from './mutations';
 import ALL_TASKS_QUERY from '../TaskList/query';
+
+import FormEditTask from '../../forms/FormEditTask';
 
 const mapStateToProps = state => {
 	return {
@@ -17,7 +18,6 @@ const withTaskItem = compose(
 	connect(mapStateToProps),
 	graphql(CHANGE_STATE_OF_TASK, { name: 'changeStateTodoMutation' }),
 	graphql(DELETE_TASK, { name: 'deleteTodoMutation' }),
-	// withState('editing', 'setEditing', false),
 	withHandlers({
 		handleComplete: props => () => {
 			props.changeStateTodoMutation({

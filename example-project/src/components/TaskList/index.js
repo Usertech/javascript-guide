@@ -1,9 +1,10 @@
 import React from 'react';
 import { compose } from 'recompose';
-import { graphql } from 'react-apollo';
-import TaskItem from '../TaskItem';
 
+import { graphql } from 'react-apollo';
 import ALL_TASKS_QUERY from './query';
+
+import TaskItem from '../TaskItem';
 
 const withTaskList = compose(
 	graphql(ALL_TASKS_QUERY, { name: 'allTodosQuery' })

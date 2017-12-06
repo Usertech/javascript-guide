@@ -10,8 +10,6 @@ import tasksModule from 'modules/tasks';
 
 // sw2ql
 import { ApolloProvider } from 'react-apollo';
-import { ApolloClient } from 'apollo-client';
-import { InMemoryCache } from 'apollo-cache-inmemory';
 import { applyMiddleware } from 'redux';
 
 import {
@@ -55,9 +53,6 @@ const enhance = compose(
 						? window.__REDUX_DEVTOOLS_EXTENSION__()
 						: f => f // eslint-disable-line
 				],
-				// {
-				// 	routes,
-				// }
 			});
 			return {
 				store,

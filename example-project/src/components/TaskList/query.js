@@ -1,7 +1,7 @@
 import gql from 'graphql-tag';
 
 const ALL_TASKS_QUERY = gql`
-	query AllTodosQuery {
+	query allTodosQuery {
 		getTodos {
 			_id
 			name
