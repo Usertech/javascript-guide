@@ -1,34 +1,40 @@
 import React from 'react';
 import { compose } from 'recompose';
-import { connect } from 'react-redux';
+import { graphql } from 'react-apollo';
 import TaskItem from '../TaskItem';
 
+import ALL_TASKS_QUERY from './query';
+
 const withTaskList = compose(
-	connect(
-		(state) => ({
-			tasks: state.tasks,
-		})
-	)
+	graphql(ALL_TASKS_QUERY, { name: 'allTodosQuery' })
 );
 
-const renderTaskList = (props) => {
-	const { type, tasks: data } = props;
-	const tasks = (type === 'active' ? (
-		data.filter(item => !item.completed).map(task => (
-			<li key={task.id}>
-				<TaskItem {...task} />
-			</li>
-		))
-	) : (
-		data.filter(item => item.completed).map(task => (
-			<li key={task.id}>
-				<TaskItem {...task} />
-			</li>
-		))
-	));
+const renderTaskList = props => {
+	// Handles props not being loaded yet
+	if (props.allTodosQuery && props.allTodosQuery.loading) {
+		console.log('loading data');
+		return <div>Loading...</div>;
+	}
+
+	// Handles if server sends back an error
+	if (props.allTodosQuery && props.allTodosQuery.error) {
+		console.log(props.allTodosQuery.error);
+		return <h1> error </h1>;
+	}
+
+	// Data received -> renders data
+	// Filtring function decides what data to show depending on whether the component has "isDone" prop
+	const filtered = props.allTodosQuery.getTodos.filter(
+		i => i.isDone === props.isDone
+	);
+
 	return (
 		<ul className="task-list">
-			{tasks}
+			{filtered.map(i => (
+				<li key={i._id}>
+					<TaskItem {...i} />
+				</li>
+			))}
 		</ul>
 	);
 };

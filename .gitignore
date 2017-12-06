@@ -1,1 +1,10 @@
 # Created by .ignore support plugin (hsz.mobi)
+
+example-project/.env.devserver
+example-project/node_modules
+example-project/public
+example-project/yarn.lock
+example-project/re-app-builder.config.js
+example-project/manifest/manifest.json
+
+HOWTOS2QL.md 

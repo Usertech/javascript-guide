@@ -24,12 +24,18 @@
       "re-app-builder": "https://github.com/stackscz/re-app-builder#4f8b9c1423b96154844528681c20fe3ee579741d"
    },
    "dependencies": {
-      "axios": "^0.16.2",
+      "apollo-cache-inmemory": "^1.1.1",
+      "apollo-client": "^2.0.3",
+      "apollo-client-preset": "^1.0.3",
+      "axios": "^0.17.1",
       "client-core": "https://github.com/stackscz/client-core.git#59f3eb07d7acd77661d9173e86fef9437f2bd260",
-      "font-awesome": "^4.7.0",
+      "graphql": "^0.11.7",
+      "graphql-tag": "^2.5.0",
       "history": "^4.6.1",
       "lodash": "^4.17.4",
+      "node-constants": "^0.0.2",
       "react": "^16.1.1",
+      "react-apollo": "1.4.16",
       "react-dom": "^16.1.1",
       "react-redux": "^5.0.6",
       "react-router": "^4.0.0",
@@ -39,6 +45,10 @@
       "redux": "^3.7.2",
       "redux-form": "^7.1.1",
       "redux-saga": "^0.15.3",
-      "seamless-immutable": "^7.1.2"
+      "seamless-immutable": "^7.1.2",
+      "store2": "^2.5.9",
+      "swagger-graphql-schema": "https://github.com/brabeji/swagger-graphql-schema.git#bacfa65e5a178cf7e0b5fff70be793a0afa07008",
+      "swagger-parser": "^4.0.1",
+      "yaml-loader": "^0.5.0"
    }
 }

@@ -1,45 +1,109 @@
 import React from 'react';
-import { compose, withHandlers } from 'recompose';
+import { compose, withState, withHandlers } from 'recompose';
 import { connect } from 'react-redux';
+import { graphql } from 'react-apollo';
+
 import FormEditTask from '../../forms/FormEditTask';
+import { CHANGE_STATE_OF_TASK, DELETE_TASK } from './mutations';
+import ALL_TASKS_QUERY from '../TaskList/query';
+
+const mapStateToProps = state => {
+	return {
+		formOpenAt: state.tasks.formOpenAt,
+	};
+};
 
 const withTaskItem = compose(
-	connect(),
+	connect(mapStateToProps),
+	graphql(CHANGE_STATE_OF_TASK, { name: 'changeStateTodoMutation' }),
+	graphql(DELETE_TASK, { name: 'deleteTodoMutation' }),
+	// withState('editing', 'setEditing', false),
 	withHandlers({
-		handleComplete: ({ dispatch, id, completed }) => () => {
-			dispatch({ type: 'TOGGLE_COMPLETED', payload: { id, completed: !completed } });
+		handleComplete: props => () => {
+			props.changeStateTodoMutation({
+				variables: {
+					_id: props._id,
+				},
+			});
 		},
-		handleDelete: ({ dispatch, id, title }) => () => {
-			const confirm = window.confirm(`Are you sure you want to delete task with title: ${title}?`);
+		handleDelete: props => () => {
+			const confirm = window.confirm(
+				`Are you sure you want to delete task with title: ${props.name}?`
+			);
 			if (confirm) {
-				dispatch({ type: 'DELETE_TASK', payload: { id } });
+				props.deleteTodoMutation({
+					variables: {
+						_id: props._id,
+					},
+					// Optimistic response and update mock serve response so that UI fells faster
+					optimisticResponse: {
+						__typename: 'Mutation',
+						deleteTodo: {
+							__typename: 'Todo',
+							_id: props._id,
+							name: props.name,
+							isDone: false,
+						},
+					},
+					update: (store, { data: { deleteTodo } }) => {
+						// Read the data from our cache for this query.
+						const data = store.readQuery({ query: ALL_TASKS_QUERY });
+
+						// Finds and splices out desired Todo
+						const index = data.getTodos.indexOf(
+							data.getTodos.find(i => i._id === deleteTodo._id)
+						);
+						data.getTodos.splice(index, 1);
+
+						// Write our data back to the cache.
+						store.writeQuery({ query: ALL_TASKS_QUERY, data });
+					},
+				});
 			}
 		},
-		handleEdit: ({ dispatch, id }) => () => {
-			dispatch({ type: 'EDIT_TASK_START', payload: { id } });
+		handleEdit: ({ dispatch, _id }) => () => {
+			dispatch({ type: 'EDIT_TASK_START', payload: { _id } });
 		},
 	})
 );
 
-const renderTaskItem = ({ id, title, completed, editing, handleComplete, handleDelete, handleEdit }) => (
+const renderTaskItem = props => (
 	<div className="task-item">
-		<label className="checkbox"><input type="checkbox" checked={completed} onChange={handleComplete} /><span><span className="fa fa-check" /></span></label>
+		<label className="checkbox">
+			<input
+				type="checkbox"
+				checked={props.isDone}
+				onChange={props.handleComplete}
+			/>
+			<span>
+				<span className="fa fa-check" />
+			</span>
+		</label>
 		<div className="task-item__title">
-			{completed ? (
-				<strike>{title}</strike>
+			{props.isDone ? (
+				<s>{props.name}</s>
+			) : props.formOpenAt === props._id ? (
+				<FormEditTask initialValues={{ name }} _id={props._id} />
 			) : (
-				editing ? (
-					<FormEditTask initialValues={{ title }} id={id} />
-				) : (
-					<span>{title}</span>
-				)
+				<span>{props.name}</span>
 			)}
 		</div>
 		<div className="task-item__actions">
-			{!completed && !editing && (
-				<button onClick={handleEdit} className="button-action button-action--edit"><span className="fa fa-edit" /></button>
-			)}
-			<button onClick={handleDelete} className="button-action button-action--delete"><span className="fa fa-trash" /></button>
+			{!props.isDone &&
+				!props.editing && (
+					<button
+						onClick={props.handleEdit}
+						className="button-action button-action--edit"
+					>
+						<span className="fa fa-edit" />
+					</button>
+				)}
+			<button
+				onClick={props.handleDelete}
+				className="button-action button-action--delete"
+			>
+				<span className="fa fa-trash" />
+			</button>
 		</div>
 	</div>
 );

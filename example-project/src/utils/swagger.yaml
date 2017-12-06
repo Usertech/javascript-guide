@@ -1,0 +1,101 @@
+swagger: '2.0'
+schemes:
+  - http
+host: 'localhost:8080'
+basePath: ''
+info:
+  description: Example app for react.js and GraphQL
+  title: Example Project
+  version: v1
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  /todos:
+    get:
+      operationId: getTodos
+      responses:
+        '200':
+          description: A successful response
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Todo'
+    post:
+      operationId: addTodo
+      consumes: 
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: body
+        description: Body of todo
+        schema:
+          $ref: '#/definitions/Todo'
+      responses: 
+        '200':
+          description: 'OK'
+          schema:
+            $ref: '#/definitions/Todo'
+            
+  /todo/{todoID}:
+    post:
+      operationId: changeStateTodo
+      description: "Change status od a todo (Done / not done)"
+      parameters:
+      - name: "todoID"
+        in: "path"
+        description: "ID of todo that needs to be updated"
+        required: true
+        type: "string"
+      responses:
+        '200':
+          description: Change status of a todo (Done / not done)
+          schema: 
+            $ref: '#/definitions/Todo'
+    delete:
+      operationId: deleteTodo
+      description: deletes a todo
+      parameters:
+      - name: "todoID"
+        in: "path"
+        description: "ID of pet that needs to be updated"
+        required: true
+        type: "string"
+      responses:
+        '200':
+          description: Change status of a todo (Done / not done)
+          schema: 
+            $ref: '#/definitions/Todo'
+
+  /todo/edit:
+    post:
+      operationId: editTodo
+      description: changes the name of a todo
+      consumes: 
+      - "application/json"
+      parameters:
+      - name: body
+        in: "body"
+        description: Body of todo
+        schema:
+          $ref: '#/definitions/Todo'
+      responses: 
+        '200':
+          description: Change status of a todo (Done / not done)
+          schema: 
+            $ref: '#/definitions/Todo'
+    
+definitions:
+  Todo:
+    title: Todo
+    properties:
+      _id: 
+        type: string
+      name:
+        type: string
+        example: 'Kill Kenny'
+      isDone:
+        type: boolean
+        example: false
+    type: object
