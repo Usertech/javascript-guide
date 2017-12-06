@@ -22,8 +22,8 @@ import {
 	renderNothing,
 } from 'recompose';
 
-import withSwagger from './utils/withSwagger.js';
-import createSwaggerApolloClient from './utils/createSwaggerApolloClient.js';
+import withSwagger from './utils/sw2ql/withSwagger.js';
+import createSwaggerApolloClient from './utils/sw2ql/createSwaggerApolloClient.js';
 
 // Styles
 import './styles/index.sass';
