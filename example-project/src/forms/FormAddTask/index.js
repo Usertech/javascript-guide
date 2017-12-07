@@ -5,7 +5,7 @@ import { Field } from 'redux-form';
 
 import { graphql } from 'react-apollo';
 import ADD_TASK_MUTATION from './mutation';
-import allTasksQuery from '../../components/TaskList/query';
+import allTasksQuery from 'queries/allTasks';
 
 import withForm from 'client-core/lib/modules/forms/decorators/withForm';
 import InputTextField from '../../form-fields/InputTextField';

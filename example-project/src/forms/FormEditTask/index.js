@@ -4,7 +4,7 @@ import { compose, withHandlers } from 'recompose';
 import { Field } from 'redux-form';
 
 import { graphql } from 'react-apollo';
-import allTasksQuery from '../../components/TaskList/query';
+import allTasksQuery from 'queries/allTasks';
 import EDIT_TASK_MUTATION from './mutation';
 
 import InputTextField from '../../form-fields/InputTextField';

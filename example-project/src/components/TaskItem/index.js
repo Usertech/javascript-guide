@@ -4,7 +4,7 @@ import { compose, withHandlers } from 'recompose';
 
 import { graphql } from 'react-apollo';
 import { CHANGE_STATE_OF_TASK, DELETE_TASK } from './mutations';
-import ALL_TASKS_QUERY from '../TaskList/query';
+import ALL_TASKS_QUERY from 'queries/allTasks';
 
 import FormEditTask from '../../forms/FormEditTask';
 

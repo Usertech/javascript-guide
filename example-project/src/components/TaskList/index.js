@@ -2,7 +2,7 @@ import React from 'react';
 import { compose } from 'recompose';
 
 import { graphql } from 'react-apollo';
-import ALL_TASKS_QUERY from './query';
+import ALL_TASKS_QUERY from 'queries/allTasks';
 
 import TaskItem from '../TaskItem';
 

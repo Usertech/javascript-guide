@@ -1,5 +1,44 @@
 ## Project structure and build
 
+### Project structure
+
+```
++-- manifest
++-- node_modules
++-- public
++-- src
+|   +-- components
+|   |   +-- DummyComponent
+|   |   |   +-- index.js
+|   |   |   +-- style.scss
+|   |   |   +-- mutation.js
+|   |   |   +-- query.js
+|   |   |   +-- ...
+|   +-- form fields
+|   +-- forms
+|   +-- modules
+|   +-- queries (Only those used on multiple ocasions)
+|   +-- mutations (Only those used on lutiple ocasions )
+|   +-- screens
+|   +-- styles (variables, mixins...)
+|   +-- utils
+|   +-- App.js
+|   +-- htmlStub.js
+|   +-- index.js
+|   +-- routes.js
+|   +-- store.js
+|   +-- ...
++-- .babelrc
++-- .env
++-- .eslintrc
++-- package.json
++-- re-app-builder.config.js
++-- .yarn-error.log
++-- yarn.lock
++-- .gitignore
++-- ...
+```
+
 ### Standard frontend project
 
     // package.json
