@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { compose, withHandlers } from 'recompose';
 import { Field } from 'redux-form';
+import onClickOutside from 'react-onclickoutside';
 
 import { graphql } from 'react-apollo';
 import allTasksQuery from 'queries/allTasks';
@@ -62,16 +63,25 @@ const withFormEditTask = compose(
 			});
 			dispatch({ type: 'EDIT_TASK_END', payload: {} });
 		},
-	})
+		handleClickOutside: ({ dispatch }) => () => {
+			dispatch({ type: 'EDIT_TASK_END', payload: {} });
+		},
+	}),
+	onClickOutside
 );
 
 const renderFormEditTask = ({ handleSubmit, handleFormEditTask }) => (
-	<form onSubmit={handleSubmit(handleFormEditTask)} className="form-edit-task">
-		<Field component={InputTextField} type="text" name="name" />
-		<button type="submit" className="button">
-			Submit
-		</button>
-	</form>
+	<div>
+		<form
+			onSubmit={handleSubmit(handleFormEditTask)}
+			className="form-edit-task"
+		>
+			<Field component={InputTextField} type="text" name="name" />
+			<button type="submit" className="button">
+				Submit
+			</button>
+		</form>
+	</div>
 );
 
 export default withFormEditTask(renderFormEditTask);

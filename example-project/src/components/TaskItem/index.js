@@ -8,14 +8,12 @@ import ALL_TASKS_QUERY from 'queries/allTasks';
 
 import FormEditTask from '../../forms/FormEditTask';
 
-const mapStateToProps = state => {
-	return {
-		formOpenAt: state.tasks.formOpenAt,
-	};
-};
-
 const withTaskItem = compose(
-	connect(mapStateToProps),
+	connect(state => {
+		return {
+			formOpenAt: state.tasks.formOpenAt,
+		};
+	}),
 	graphql(CHANGE_STATE_OF_TASK, { name: 'changeStateTodoMutation' }),
 	graphql(DELETE_TASK, { name: 'deleteTodoMutation' }),
 	withHandlers({
