@@ -55,3 +55,6 @@ successful js development.
 	* side effects
 		* `redux-saga`
 	* `client-core`
+
+* [Swagger2GraphQL guide](HOWTOSW2QL.md)
+	* Guide on how to mock GraphQL endpoint from swagger.yaml on frontend
