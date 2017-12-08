@@ -1,13 +1,13 @@
 # Swagger2QL
 This is a guide on how to properly set up your application to mock GraphQL environment on frontend from a swagger (.yaml) file, which contains documentation of your desired REST API, from scratch.
 
-##### 1) Build you app via re-app-builder
+##### 1) Build you app via [re-app-builder](https://github.com/stackscz/re-app-builder)
 ##### 2) In `src` directory create:
  
  - `utils` folder
  - and inside utils folder `sw2ql` folder
 
-##### 3) Copy these files from example-project
+##### 3) Copy these files from [example-project](example-project)
  - `createSwaggerApolloClient.js`
  - `createSwaggerNetworkInterface.js`
  - `withSwagger.js`

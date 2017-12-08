@@ -8,6 +8,10 @@ applications at U+. If something
 _If some project has javascript code, it's a javascript application and this
 guide applies._
 
+If you are looking for help on how to set up a project check [re-app-builder](https://github.com/stackscz/re-app-builder).
+
+If you are looking for help on how to set up a project with mocked GraphQL on frontend check [HOWTOSW2QL.md](HOWTOSW2QL.md)
+
 There are four main parts in this doc which tries to cover topics needed for
 successful js development.
 
