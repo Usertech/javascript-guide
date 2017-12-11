@@ -1,23 +1,23 @@
 # Swagger2QL
 This is a guide on how to properly set up your application to mock GraphQL environment on frontend from a swagger (.yaml) file, which contains documentation of your desired REST API, from scratch.
 
-##### 1) Build you app via [re-app-builder](https://github.com/stackscz/re-app-builder)
-##### 2) In `src` directory create:
+#### 1) Build you app via [re-app-builder](https://github.com/stackscz/re-app-builder)
+#### 2) In `src` directory create:
  
  - `utils` folder
  - and inside utils folder `sw2ql` folder
 
-##### 3) Copy these files from [example-project](example-project)
+#### 3) Copy these files from [example-project](example-project)
  - `createSwaggerApolloClient.js`
  - `createSwaggerNetworkInterface.js`
  - `withSwagger.js`
 
-##### 4) In `src/utils` create:
+#### 4) In `src/utils` create:
  - `constants.js` file with this content:
     ```
     export const OAUTH_TOKEN_STORAGE_KEY = 5;
     ```
-##### 5) Install necessary dependencies
+#### 5) Install necessary dependencies
 ```
 		"apollo-client": "^2.0.3",
 		"apollo-client-preset": "^1.0.3",
@@ -44,12 +44,12 @@ This is a guide on how to properly set up your application to mock GraphQL envir
 
 **Make sure `react apollo` is on version 1.4.16!**
 
-##### 6) In `src` create:
+#### 6) In `src` create:
  - `App.js` with the same content as in example project
 
-##### 7) Add your custom `swagger.yaml` file to `src/utils/sw2ql/` folder
+#### 7) Add your custom `swagger.yaml` file to `src/utils/sw2ql/` folder
 
-##### 8) Link `App` as a component in `src/index.js`
+#### 8) Link `App` as a component in `src/index.js`
 
 ```
 import React from 'react'
@@ -60,4 +60,4 @@ ReactDOM.render(<App />, document.getElementById('root'))
 ```
 ## Summary
 
-Your app is now set up! Feel free to start your queries and mutations. If you aren't sure exactly how: Inspire yourself from the example-project or take this react-apollo course https://www.howtographql.com/react-apollo/0-introduction/
+Your app is now set up! Feel free to start with your queries and mutations. If you aren't sure on exactly how: Inspire yourself from the example-project or take this react-apollo course https://www.howtographql.com/react-apollo/0-introduction/
