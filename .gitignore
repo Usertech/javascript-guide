@@ -3,7 +3,6 @@
 example-project/.env.devserver
 example-project/node_modules
 example-project/public
-example-project/yarn.lock
 example-project/manifest/manifest.json
 
-HOWTOS2QL.md 
+HOWTOS2QL.md
