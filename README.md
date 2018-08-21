@@ -3,7 +3,6 @@
 > This document is a work in progress, please contribute!
 
 This document contains best practices to follow when developing javascript applications at UT.
-If something 
 
 *If some project has javascript code, 
 it's a javascript application and this guide applies.*
