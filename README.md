@@ -1,3 +1,5 @@
+[DEPRECATED] in favor of [usertech/javascript](https://github.com/usertech/javascript)
+
 # U+ `javascript`
 
 > This document is a work in progress, please contribute!
